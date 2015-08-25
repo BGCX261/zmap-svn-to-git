@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:CreatePlayerView xmlns:UI="com.redbaby.game.view.compFore.CreatePlayer.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" creationComplete="creationCompleteHandle()">
+	<mx:Image x="590.5" y="90"/>
+	<mx:Image x="721.5" y="90"/>
+	<mx:RadioButton x="590.5" y="269" label="男"/>
+	<mx:RadioButton x="721.5" y="269" label="女"/>
+	<mx:Button x="1189" y="481" label="进入游戏" id="playGameBtn" visible="false" click="playGameHandle()"/>
+	<mx:Button x="1115" y="481" label="创建角色" id="createRoleBtn" visible="false" click="createRoleHandle()"/>
+	<mx:Label x="546.5" y="377" text="角色名："/>
+	<mx:TextInput x="599.5" y="375" id="roleName"/>
+</UI:CreatePlayerView>

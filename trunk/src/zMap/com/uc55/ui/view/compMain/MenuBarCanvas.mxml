@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:MenuBarView xmlns:UI="com.uc55.game.view.main.*" xmlns:mx="http://www.adobe.com/2006/mxml" fontSize="12" width="100%" labelField="@label" dataProvider="{menuBarCollection}" creationComplete="initCollections()" itemClick="menuHandel(event)" height="30">
+</UI:MenuBarView>

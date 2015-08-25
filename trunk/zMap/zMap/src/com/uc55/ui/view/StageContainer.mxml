@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:UIBase xmlns:UI="com.uc55.view.*" xmlns:VO="com.uc55.vo.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:Script>
+		<![CDATA[
+			
+		]]>
+	</mx:Script>
+</UI:UIBase>

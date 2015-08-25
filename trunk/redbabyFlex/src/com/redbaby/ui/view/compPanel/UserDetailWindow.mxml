@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:UserDetailView xmlns:UI="com.redbaby.game.view.compPanel.*" xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" fontSize="12" width="544" height="470" title="用户信息" close="close()">
+	<mx:Image x="10" y="10" width="103" height="103"/>
+	<mx:Label x="43" y="121" text="晓糖"/>
+</UI:UserDetailView>

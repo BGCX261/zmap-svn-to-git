@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:DetailView xmlns:UI="com.redbaby.game.view.compMain.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="154" height="160" fontSize="12" color="0xFFFFFF" x="975" backgroundColor="0x333333" alpha=".8">
+	<mx:Image x="1" y="1" width="70" height="59"/>
+	<mx:Label x="79" y="42" text="晓糖Lv"/>
+	<mx:Label x="10" y="68" text="等级:"/>
+	<mx:Image x="0" y="85" height="19" width="154"/>
+	<mx:Label x="10" y="112" text="积分: 999999999"/>
+	<mx:Button x="60" y="131" label="查看详情" width="89" click="showUserDetail()"/>
+</UI:DetailView>

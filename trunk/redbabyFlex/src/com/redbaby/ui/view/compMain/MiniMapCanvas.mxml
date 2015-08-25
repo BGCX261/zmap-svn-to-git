@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:MiniMap xmlns:UI="com.redbaby.game.view.compMain.map.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="182" height="147" fontSize="12" creationComplete="initView()">
+	<mx:Image x="0" y="0" width="181" height="121" id="miniMap"/>
+	<mx:Canvas x="1" y="1" width="180" height="120" backgroundColor="0x333333" alpha=".8" />
+	<mx:Button x="2" y="2" label="+"/>
+	<mx:Button x="36" y="2" label="-"/>
+	<mx:ComboBox x="1" y="122" text="商城" width="65"></mx:ComboBox>
+	<mx:Button x="65" y="122" label="收藏夹" width="67"/>
+	<mx:Button x="131" y="122" label="收藏"/>
+</UI:MiniMap>

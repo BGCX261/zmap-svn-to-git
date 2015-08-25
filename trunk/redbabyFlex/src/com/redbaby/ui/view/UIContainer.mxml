@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:UIBase xmlns:UI="com.redbaby.game.view.*" xmlns:VO="com.redbaby.game.vo.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:Script>
+		<![CDATA[
+			import com.redbaby.game.view.ViewPredef;;
+		]]>
+	</mx:Script>
+	<mx:Array id="uiList">
+		<VO:UIPropVO id="_loginLayer_UIPropVO" cls="{LoginLayer}" type="登陆界面层" initVisible="true" vid="{ViewPredef.LOGIN_LAYER}" />
+		<VO:UIPropVO id="_mainLayer_UIPropVO" cls="{MainLayer}" type="主界面层" vid="{ViewPredef.MAIN_LAYER}" initVisible="true" createLater="true"/>
+		<VO:UIPropVO id="_panelLayer_UIPropVO" cls="{PanelLayer}" type="弹出界面层" vid="{ViewPredef.PANEL_LAYER}" initVisible="true" createLater="true" />
+		<VO:UIPropVO id="_debugLayer_UIPropVO" cls="{DebugLayer}" type="调试界面层" initVisible="true" vid="{ViewPredef.DEBUG_LAYER}" isLast="true"/>
+	</mx:Array>
+</UI:UIBase>

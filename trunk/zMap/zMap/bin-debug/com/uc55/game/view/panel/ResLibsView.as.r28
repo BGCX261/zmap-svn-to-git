@@ -1,0 +1,107 @@
+package com.uc55.game.view.panel{
+	import com.uc55.view.UIWindow;
+	
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	import flash.display.Loader;
+	import flash.display.MovieClip;
+	import flash.events.Event;
+	import flash.events.IOErrorEvent;
+	import flash.events.MouseEvent;
+	import flash.events.ProgressEvent;
+	import flash.system.LoaderContext;
+	import flash.utils.ByteArray;
+	
+	import mx.controls.Image;
+	import mx.core.UIComponent;
+	
+	import riaidea.utils.zip.ZipArchive;
+	import riaidea.utils.zip.ZipEvent;
+	import riaidea.utils.zip.ZipFile;
+	
+	
+	public class ResLibsView extends UIWindow{
+		public var ViewItem:Image;
+		private var cur_item:String;
+		
+		[Bindable]
+		public var libs:XMLList;
+		
+		private var zipl:ZipArchive = new ZipArchive();
+		
+		public function ResLibsView():void{
+			zipl.load("map.zip");
+			zipl.addEventListener(ProgressEvent.PROGRESS, loading);
+			zipl.addEventListener(ZipEvent.ZIP_INIT, inited);
+			zipl.addEventListener(ZipEvent.ZIP_FAILED, failed);
+			zipl.addEventListener(IOErrorEvent.IO_ERROR, ioerror);
+		}
+		
+		private function loading(e:ProgressEvent):void {
+			//trace("loading");
+		}
+		
+		private function inited(e:ZipEvent):void {
+			//trace("loadOK");
+			zipl.addEventListener(ZipEvent.ZIP_CONTENT_LOADED, imgloaded);
+			var file:ZipFile = zipl.getFileByName("catalog.xml");
+			var xml:XML=new XML(file.data);
+			libs=XMLList(xml);
+		}
+		
+		private function imgloaded(e:ZipEvent):void{
+			trace("fileLoade");
+		}
+		
+		private function failed(e:ZipEvent):void {
+			trace("failed");
+		}
+		
+		private function ioerror(e:IOErrorEvent):void {
+			trace("ioerror");
+		}
+		
+		protected function showItem(e:MouseEvent):void{
+			try{
+				trace(e.target.text);
+				var swfFile:ZipFile=zipl.getFileByName("library.swf");
+				var swf:ByteArray=swfFile.data;
+				cur_item=e.target.text;
+				var l:Loader = new Loader();
+				
+				var loaderContext:LoaderContext = new LoaderContext();
+				loaderContext.allowLoadBytesCodeExecution = true;
+	            l.loadBytes(swf, loaderContext);
+	            l.contentLoaderInfo.addEventListener(Event.COMPLETE,onSWFLoaded);
+	        }catch(e:Error){
+   				
+   			}
+		}
+		
+		private function onSWFLoaded(e:Event):void{
+			try{
+				var swc:*=e.currentTarget;
+				trace(swc.applicationDomain.getDefinition(cur_item) as Class);
+				var myClass:Class=swc.applicationDomain.getDefinition(cur_item) as Class;
+				var bitmapData:BitmapData=new myClass(60,60) as BitmapData;
+		        var bitmap:Bitmap=new Bitmap(bitmapData);
+		        ViewItem.source=bitmap;
+	  		}catch(e:Error){
+	  			
+	  		}
+		}
+		
+		protected function cloneItem(e:MouseEvent):void{
+			var bm:BitmapData=Bitmap(e.currentTarget.source).bitmapData;
+			var newBm:Bitmap=new Bitmap(bm);
+			var newMc:MovieClip=new MovieClip();
+			newMc.addChild(newBm);
+			var comp:UIComponent=new UIComponent();
+			comp.addChild(newMc);
+			comp.startDrag();
+			comp.x=this.stage.mouseX;
+			comp.y=this.stage.mouseY;
+			this.parentApplication.addChild(comp);
+		}
+	}
+}

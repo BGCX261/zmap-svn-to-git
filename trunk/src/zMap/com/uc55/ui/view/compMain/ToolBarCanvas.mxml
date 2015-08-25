@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:ToolBarView xmlns:UI="com.uc55.game.view.main.*" xmlns:mx="http://www.adobe.com/2006/mxml" y="30" width="100%" height="30">
+	<mx:Button x="14" y="3" label="Hide Grid Layer"/>
+	<mx:Button x="144" y="3" label="Hide Build Layer"/>
+	<mx:Button x="279" y="3" label="Hide Point Num."/>
+</UI:ToolBarView>

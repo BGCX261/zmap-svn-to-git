@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" buttonMode="true" color="0xc3c3c3" width="76" height="68" creationComplete="initView()">
+	<mx:Script>
+		<![CDATA[
+			import gs.*; 
+			import gs.easing.*;
+			[Bindable]
+			public var typeName:String;
+			
+			[Bindable]
+			public var Ico_Id:Class;
+			
+			private var tip:Sprite;
+			private var shape:Shape;
+			private var textFiled:TextField;
+			
+			private function initView():void{
+				tip=new Sprite();
+				
+				textFiled=new TextField();
+				shape=new Shape();
+				
+				var textFormat:TextFormat=new TextFormat();
+				textFormat.color=0x1F1F1F;
+				textFormat.size=12;
+				textFormat.font="Tahoma";
+				
+				textFiled.defaultTextFormat=textFormat;
+				
+				textFiled.autoSize=TextFieldAutoSize.CENTER;
+				
+				textFiled.text="dev for your map project";
+				textFiled.visible=false;
+				
+				tip.addChild(shape);
+				tip.addChild(textFiled);
+				
+				ico.addChild(tip);
+				initIcon();
+				initEvent();
+			}
+			
+			private function initEvent():void{
+				this.addEventListener(MouseEvent.MOUSE_OVER,onMouseOverHandel);
+				this.addEventListener(MouseEvent.MOUSE_OUT,onMouseOutHandel);
+				
+			}
+			
+			private function onMouseOverHandel(e:MouseEvent):void{
+				showToolTip(200,50,true);
+				TweenMax.to(ico,.5,{glowFilter:{color:0xC3C3C3, alpha:1, blurX:30, blurY:30}});
+				TweenMax.to(shape,.5,{scaleX:1,scaleY:1});
+			}
+			
+			private function onMouseOutHandel(e:MouseEvent):void{
+				TweenMax.killTweensOf(ico);
+				TweenMax.killTweensOf(shape);
+				ico.filters=[];
+				shape.graphics.clear();
+				textFiled.visible=false;
+			}
+			
+			private function initIcon():void{
+				if(Ico_Id){
+					var myClass:Class=Ico_Id;
+					var bitmapData:BitmapData=new myClass(60,60) as BitmapData;
+	            	var bitmap:Bitmap=new Bitmap(bitmapData);
+					ico.source=bitmap;
+				}
+			}
+			
+			private function showToolTip(w:int,h:int,dis:Boolean):void{
+				shape.y=-70;
+				
+				shape.x=-(75);
+				
+				textFiled.x=shape.x+3;
+				textFiled.y=shape.y+15;
+				shape.graphics.clear();
+				shape.graphics.beginFill(0xC3C3C3);
+				shape.graphics.drawRoundRect(0,0,w,h,10,10);
+				shape.graphics.endFill();
+				shape.alpha=0;
+				shape.visible=dis;
+				shape.scaleX=.1;
+				shape.scaleY=.1;
+				textFiled.visible=true;
+				TweenMax.to(shape,.5,{alpha:1});
+			}
+		]]>
+	</mx:Script>
+	<mx:Image y="0" height="48" width="48" id="ico" x="13"/>
+	<mx:Label y="48" width="76" textAlign="center" id="type" text="{typeName}" color="0xC3C3C3C3" x="0"/>
+</mx:Canvas>

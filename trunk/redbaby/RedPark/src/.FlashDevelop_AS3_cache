@@ -1,0 +1,23 @@
+
+#file-cache D:\RedPark\src\com\redbaby\game\data\MapData.as
+package com.redbaby.game.data{import com.redbaby.game.allInterface.IMapTileModel;import com.redbaby.game.module.map.Tile;import com.redbaby.game.module.avatar.Avatar;public class MapData extends Object implements IMapTileModel{private var m_mapData : Array;public var avatar : Avatar;public function get mapData () : Array;public function set mapData (x:Array) : Void;public function MapData ();public function isBlock (sx:int, sy:int, ex:int, ey:int) : int;public function reset (w:int, h:int, target:*) : void;}}
+#file-cache D:\RedPark\src\com\redbaby\RedPark.as
+package com.redbaby{import flash.display.Sprite;import com.redbaby.game.module.map.Map;public class RedPark extends Sprite{private var map : Map;public function RedPark ();}}
+#file-cache D:\RedPark\src\com\redbaby\game\module\map\Map.as
+package com.redbaby.game.module.map{import flash.display.Sprite;import flash.events.MouseEvent;import flash.geom.Point;import com.redbaby.game.module.map.RCS;public class Map extends Sprite{private var grid : Grid;public function Map ();private function onMapClick (e:MouseEvent) : void;}}
+#file-cache D:\RedPark\src\com\redbaby\game\module\map\Grid.as
+package com.redbaby.game.module.map{import com.redbaby.game.data.MapData;import flash.display.Sprite;import com.redbaby.game.module.map.astar.AStar;public class Grid extends Sprite{public var mapData : MapData;public var astar : AStar;public function Grid ();}}
+#file-cache D:\RedPark\src\com\redbaby\game\module\map\astar\AStar.as
+package com.redbaby.game.module.map.astar{import com.redbaby.game.allInterface.IMapTileModel;public class AStar{private var m_maxTry : int;private var m_openCount : int;private var m_openId : int;private var m_openList : Array;private var m_pathScoreList : Array;private var m_xList : Array;private var m_yList : Array;private var m_movementCostList : Array;private var m_noteMap : Array;private var m_fatherList : Array;private var m_mapTileModel : IMapTileModel;private const NOTE_ID : int;private const NOTE_CLOSED : int;private const COST_DIAGONAL : int;private const COST_STRAIGHT : int;private const NOTE_OPEN : int;public function AStar (iMapTileModel:IMapTileModel, maxTry:int = 500);public function find (sx:int, sy:int, ex:int, ey:int) : Array;public function openNote (sx:int, sy:int, score:int, cost:int, father:int) : void;private function aheadNote (index:int) : void;private function getScore (index:int) : int;private function initLists () : void;private function destroyLists () : void;}}
+#file-cache D:\RedPark\src\com\redbaby\game\allInterface\IMapTileModel.as
+package com.redbaby.game.allInterface{public interface IMapTileModel{public function IMapTileModel ();public function isBlock (sx:int, sy:int, ex:int, ey:int) : int;}}
+#file-cache D:\RedPark\src\com\redbaby\game\module\map\Tile.as
+package com.redbaby.game.module.map{import flash.display.Sprite;import flash.events.MouseEvent;public class Tile extends Sprite{public function Tile (color:uint = 0xffffff, w:int = 10, h:int = 10);private function onTileClick (e:MouseEvent) : void;}}
+#file-cache D:\RedPark\src\com\redbaby\game\module\map\RCS.as
+package com.redbaby.game.module.map{import flash.geom.Point;public class RCS{private var w : int;private var h : int;public function RCS ();public static function ScreenToPoint (x:Number, y:Number) : Point;}}
+#file-cache D:\RedPark\src\com\redbaby\game\module\avatar\Avatar.as
+package com.redbaby.game.module.avatar{import com.redbaby.game.allInterface.IAvatar;import flash.display.Sprite;public class Avatar extends Sprite implements IAvatar{public function Avatar ();public function setAction () : void;public function setAvatar () : void;}}
+#file-cache D:\RedPark\src\com\redbaby\game\allInterface\IPlayer.as
+package com.redbaby.game.allInterface{public interface IPlayer{public function IPlayer ();public function hide () : void;public function run () : void;}}
+#file-cache D:\RedPark\src\com\redbaby\game\allInterface\IAvatar.as
+package com.redbaby.game.allInterface{public interface IAvatar{public function IAvatar ();public function setAction () : void;public function setAvatar () : void;}}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" fontSize="12" width="400" height="224" y="345">
+		<mx:Canvas label="当前" width="100%" height="100%" id="publicchat">
+			<mx:TextArea x="0" y="23" height="201" width="100%" id="currbox"/>
+			<mx:Button x="344" y="195" label="发送" height="27" width="55"/>
+			<mx:TextInput x="180" y="196" width="162" height="26"/>
+			<mx:Button x="123" y="195" label="图标" width="55" height="27"/>
+			<mx:ComboBox x="0" y="195" height="27" width="121" text="普通"></mx:ComboBox>
+			<mx:Button x="35" y="172" label="+"/>
+			<mx:Button x="69" y="172" label="-"/>
+			<mx:Button x="0" y="172" label="^"/>
+		</mx:Canvas>
+		<mx:Canvas x="0" y="0" width="175" height="24" backgroundColor="0x000000" color="0xFFFFFF" alpha=".8">
+				<mx:CheckBox x="3" y="0" label="当前" selected="true"/>
+				<mx:CheckBox x="60" y="0" label="国家" selected="true"/>
+				<mx:CheckBox x="117" y="0" label="世界" selected="true"/>
+		</mx:Canvas>
+</mx:Canvas>

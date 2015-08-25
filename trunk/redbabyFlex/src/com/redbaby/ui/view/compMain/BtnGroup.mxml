@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="460" height="24" y="545" x="900" fontSize="12">
+	<mx:Script>
+		<![CDATA[
+			import com.redbaby.game.system.Core;
+			import com.redbaby.game.view.ViewManager;
+			import com.redbaby.game.view.resource.ResManager;
+        
+			public function initView():void{
+				
+			}
+		]]>
+	</mx:Script>
+	<mx:Button label="开始"/>
+	<mx:Button x="51" label="推荐"/>
+	<mx:Button x="102" label="团购"/>
+	<mx:Button x="153" label="背包"/>
+	<mx:Button x="204" label="任务"/>
+	<mx:Button x="255" label="商城"/>
+	<mx:Button x="306" label="排行"/>
+	<mx:Button x="357" label="帮助"/>
+	<mx:Button x="408" label="充值"/>
+</mx:Canvas>

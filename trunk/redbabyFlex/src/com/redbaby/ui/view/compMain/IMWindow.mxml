@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:UIWindow xmlns:UI="com.redbaby.game.view.*" xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="222" height="300" title="好友联系" fontSize="12" x="1135">
+	<mx:TabNavigator x="0" y="0" width="100%" height="100%">
+		<mx:Canvas label="好友" width="100%" height="100%">
+		</mx:Canvas>
+		<mx:Canvas label="我的群" width="100%" height="100%">
+		</mx:Canvas>
+	</mx:TabNavigator>
+</UI:UIWindow>

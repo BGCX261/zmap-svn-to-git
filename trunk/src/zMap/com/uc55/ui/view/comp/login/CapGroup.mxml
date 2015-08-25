@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="68" creationComplete="initView()">
+	<mx:Script>
+		<![CDATA[
+			private var type:Array=["","Strictfp","Useful","Saving","Database","Security","Office","Portable"];
+			private var icons:Array=[null,ico_1,ico_2,ico_3,ico_4,ico_5,ico_6,ico_7];
+			
+			private function initView():void{
+				addComp();
+			}
+			
+			private function addComp():void{
+				for(var i:int=1;i<8;i++){
+					var icon:zIcon=new zIcon();
+					icon.typeName=type[i];
+					icon.Ico_Id=icons[i];
+					icon.x=90*i;
+					this.addChild(icon);
+				}
+			}
+		]]>
+	</mx:Script>
+</mx:Canvas>

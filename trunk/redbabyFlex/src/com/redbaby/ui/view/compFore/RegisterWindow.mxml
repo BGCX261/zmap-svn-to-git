@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:RegisterWindow xmlns:UI="com.redbaby.game.view.compFore.login.*" xmlns:mx="http://www.adobe.com/2006/mxml" title="用户注册" layout="absolute" width="400" height="300" close="close()" creationComplete="creationCompleteHandle()">
+	<mx:Label text="用户名：" x="80" y="38"/>
+	<mx:TextInput x="156" y="36"/>
+	<mx:Label x="90" y="75" text="密码："/>
+	<mx:TextInput x="156" y="73" id="PassWord"/>
+	<mx:Label x="70" y="112" text="确认密码："/>
+	<mx:TextInput x="156" y="110" id="RePassWord"/>
+	<mx:Label x="80" y="153" text="验证码："/>
+	<mx:TextInput x="156" y="151" width="80" text="0" id="CheckID"/>
+	<mx:Image x="244" y="151" height="22" width="72"/>
+	<mx:Button x="80" y="218" label="注册" click="registerHandle()"/>
+	<mx:Button x="254" y="218" label="取消" click="close()"/>
+	
+</UI:RegisterWindow>

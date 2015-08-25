@@ -1,0 +1,9 @@
+package com.uc55.game.view.panel{
+	import mx.containers.TitleWindow;
+	
+	public class ResLibsView extends TitleWindow{
+		public function ResLibsView():void{
+			
+		}
+	}
+}

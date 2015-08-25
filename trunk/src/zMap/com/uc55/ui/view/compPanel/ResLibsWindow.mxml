@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:ResLibsView xmlns:UI="com.uc55.game.view.panel.*" y="30" x="400" xmlns:mx="http://www.adobe.com/2006/mxml" title="Resource Library" layout="absolute" width="300" height="600">
+	<mx:Button x="208" y="10" label="+"/>
+	<mx:Button x="251" y="10" label="-" width="35"/>
+	<mx:ComboBox x="10" y="10" width="190"></mx:ComboBox>
+	<mx:Tree x="10" y="42" width="276" height="278" dataProvider="{libs}" labelField="@name" click="showItem(event)"></mx:Tree>
+	<mx:Image x="10" y="328" width="276" height="231" scaleContent="true" id="ViewItem" mouseDown="cloneItem(event)"/>
+</UI:ResLibsView>

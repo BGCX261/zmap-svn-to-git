@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:LoginView xmlns:UI="com.uc55.game.view.login.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" creationComplete="initView()">
+	<mx:Image y="63" source="logo.jpg" width="202" height="82" id="logo"/>
+	<mx:Label text="Auhtor Blog" id="blog" buttonMode="true" textDecoration="underline" fontWeight="bold" textAlign="center" color="#C3C3C3"/>
+	<mx:Label y="471" id="gcode" text="Google Code[code.google.com/p/zmap]Ver.a_1.0_090908_01" color="#C3C3C3"/>
+	<mx:Label y="490" id="author" text="Author:ZeR | QQ:61440210 | Email:riazone@qq.com" color="#C3C3C3"/>
+	<mx:Canvas y="234" width="355" height="203" id="loginPanel" >
+		<mx:Image id="bg"/>
+		<mx:Button y="10" x="304.5" label="?" toolTip="Help Doc."/>
+		<mx:Label x="19.5" y="56" text="Account" color="#C3C3C3"/>
+		<mx:Label x="17.5" y="100" text="Password" color="#C3C3C3"/>
+		<mx:TextInput x="86.5" y="98" width="251" displayAsPassword="true" id="password"/>
+		<mx:ComboBox x="86.5" y="53" width="251" editable="true" id="account"/>
+		<mx:CheckBox x="17.5" y="151" label="Stay signed in " id="saveAccount" click="saveSelect()"/>
+		<mx:Button x="269.5" y="151" label="Sign in" click="loginHandel()"/>
+	</mx:Canvas>
+	<mx:Label id="web" text="Web Version" fontWeight="bold" textDecoration="underline" color="#C3C3C3"/>
+	<mx:Canvas y="538" width="710" height="68" id="CapGroupCanvas"/>
+</UI:LoginView>

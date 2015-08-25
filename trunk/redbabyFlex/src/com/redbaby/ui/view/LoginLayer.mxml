@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:UIBase xmlns:UI="com.redbaby.game.view.*" xmlns:VO="com.redbaby.game.vo.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:Script>
+		<![CDATA[
+			import com.redbaby.ui.view.compFore.*;
+			import com.redbaby.game.view.ViewPredef;
+		]]>
+	</mx:Script>
+	<mx:Array id="uiList">
+		<VO:UIPropVO cls="{LoginCanvas}" type="登陆界面" initVisible="true" vid="{ViewPredef.LOGIN_CANVAS}"/>
+		<VO:UIPropVO cls="{CreatePlayerCanvas}" type="创建角色界面" initVisible="false" vid="{ViewPredef.CREATE_PLAYER_CANVAS}" isLast="true"/>
+	</mx:Array>
+</UI:UIBase>

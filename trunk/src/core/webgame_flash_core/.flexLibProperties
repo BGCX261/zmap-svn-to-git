@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties version="1">
+  <includeClasses>
+    <classEntry path="com.adobe.serialization.json.JSON"/>
+    <classEntry path="com.adobe.serialization.json.JSONDecoder"/>
+    <classEntry path="com.adobe.serialization.json.JSONEncoder"/>
+    <classEntry path="com.adobe.serialization.json.JSONParseError"/>
+    <classEntry path="com.adobe.serialization.json.JSONToken"/>
+    <classEntry path="com.adobe.serialization.json.JSONTokenType"/>
+    <classEntry path="com.adobe.serialization.json.JSONTokenizer"/>
+    <classEntry path="com.uc55.API"/>
+    <classEntry path="com.uc55.config.Debug"/>
+    <classEntry path="com.uc55.config.GamePredef"/>
+    <classEntry path="com.uc55.config.SocketCode"/>
+    <classEntry path="com.uc55.config.SysHost"/>
+    <classEntry path="com.uc55.config.Version"/>
+    <classEntry path="com.uc55.data.DataManager"/>
+    <classEntry path="com.uc55.data.GameData"/>
+    <classEntry path="com.uc55.data.LocalCacheData"/>
+    <classEntry path="com.uc55.data.UserData"/>
+    <classEntry path="com.uc55.event.CommonEvent"/>
+    <classEntry path="com.uc55.event.CommonEventDispatcher"/>
+    <classEntry path="com.uc55.message.Message"/>
+    <classEntry path="com.uc55.rpc.SocketManager"/>
+    <classEntry path="com.uc55.system.AbstractGame"/>
+    <classEntry path="com.uc55.system.Core"/>
+    <classEntry path="com.uc55.utils.BasicToolTip"/>
+    <classEntry path="com.uc55.utils.CheatChecker"/>
+    <classEntry path="com.uc55.utils.Localizator"/>
+    <classEntry path="com.uc55.utils.MouseManager"/>
+    <classEntry path="com.uc55.utils.SysAlert"/>
+    <classEntry path="com.uc55.view.SimpleCanvas"/>
+    <classEntry path="com.uc55.view.UIBase"/>
+    <classEntry path="com.uc55.view.UICanvas"/>
+    <classEntry path="com.uc55.view.UIWindow"/>
+    <classEntry path="com.uc55.view.ViewManager"/>
+    <classEntry path="com.uc55.view.resource.ResLoader"/>
+    <classEntry path="com.uc55.view.resource.ResManager"/>
+    <classEntry path="com.uc55.vo.UIPropVO"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

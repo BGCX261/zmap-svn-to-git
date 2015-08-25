@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" width="304" height="178" layout="absolute" title="数据加载中" fontSize="12" showCloseButton="true">
+	<mx:ProgressBar width="296" label="" labelPlacement="center" height="24" x="2" y="119" indeterminate="true"/>
+	<mx:TextArea x="2" y="2" height="116" width="296" text="温馨提示：那啥！转场景的时候别瞎捣腾！" editable="true"/>
+</mx:TitleWindow>

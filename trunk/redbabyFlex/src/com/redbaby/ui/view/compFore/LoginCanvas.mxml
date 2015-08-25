@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:Login xmlns:UI="com.redbaby.game.view.compFore.login.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" creationComplete="initView()"  fontSize="12">
+	<mx:Image width="355" height="203" id="bg" x="475.5" y="164"/>
+	<mx:Button x="671.5" y="287" label="登陆" click="LoginIn()"/>
+	<mx:Button x="586" y="287" label="注册" click="RegisterUser()"/>
+	<mx:Label x="501.5" y="193" text="E-MAIL："/>
+	<mx:Label x="520.5" y="221" text="密码："/>
+	<mx:TextInput x="569.5" y="191" id="UserName"/>
+	<mx:TextInput x="569.5" y="219" id="PassWord" displayAsPassword="true"/>
+	<mx:CheckBox x="540" y="319" label="记住登陆邮箱" id="saveEmail" click="saveSelect()"/>
+	<mx:CheckBox x="649.5" y="319" label="记住密码" id="savePwd" click="saveSelect()"/>
+	<mx:Button x="773.5" y="332" label="逛逛"/>
+	<mx:RadioButton x="737.5" y="219" label="修改密码"/>
+	<mx:RadioButton x="737.5" y="191" label="找回密码"/>
+	<mx:Label x="484.5" y="249" text="输入验证码："/>
+	<mx:TextInput x="569.5" y="247" width="74.5"/>
+	<mx:Image x="646" y="247" height="22" width="77.5"/>
+	<mx:Button x="725.5" y="246" label="看不清换一个"/>
+</UI:Login>

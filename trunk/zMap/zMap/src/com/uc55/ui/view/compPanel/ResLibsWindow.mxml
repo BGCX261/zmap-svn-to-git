@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:ResLibsView xmlns:UI="com.uc55.game.view.panel.*" xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="300" height="600">
+	
+</UI:ResLibsView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UI:UIBase xmlns:UI="com.redbaby.game.view.*" xmlns:VO="com.redbaby.game.vo.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:Script>
+		<![CDATA[
+            import com.redbaby.game.view.ViewPredef;
+            import com.redbaby.game.view.compPanel.*;
+		]]>
+	</mx:Script>
+	<mx:Array id="uiList">
+		<VO:UIPropVO cls="{UserDetailView}" type="用户信息修改" initVisible="false" vid="{ViewPredef.USER_DETAIL_WINDOW}" isLast="true"/>
+	</mx:Array>
+</UI:UIBase>

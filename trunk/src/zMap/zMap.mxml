@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" minWidth="1000" minHeight="700" verticalScrollPolicy="off" horizontalScrollPolicy="off" layout="absolute" creationComplete="init()" width="100%" height="100%"  viewSourceURL="srcview/index.html">
+	<mx:Script source="Main.as"/>
+	<mx:Style source="style/style.css"/>
+</mx:WindowedApplication>
